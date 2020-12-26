@@ -1,11 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hcuOS - demo</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/wallpaper/wallpaper.css">
+    <link rel="stylesheet" href="./src/css/taskbar/taskbar.css">
+    <link rel="stylesheet" href="./src/css/taskbar/taskbar_datatitle.css">
+    <link rel="stylesheet" href="./src/css/startmenu/startmenu.css">
+    <link rel="stylesheet" href="./src/css/quickview_panel/quickview_panel.css">
+    <link rel="stylesheet" href="./src/css/right_click/right_click.css">
 </head>
 <body>
-<h1>ABCD</h1>
-  <p>Mỳ tôm chua cay</p>
-  <p>Ăn vào mịn da</p>
-  <p>Tràn đầy sức sống</p>
-  <p>Trè Xanh Studio</p>
+    <div id="root">
+        <div id="wallpaper" getfile="./src/components/wallpaper/wallpaper.html"></div>
+        <div id="taskbar" getfile="./src/components/taskbar/taskbar.html"></div>
+        <div id="hcu_right_click" getfile="./src/components/right_click/right_click.html"></div>
+        <div id="startmenu" getfile="./src/components/startmenu/startmenu.html"></div>
+        <div id="quickview_panel" getfile="./src/components/quickview_panel/quickview_panel.html"></div>
+    </div>
+
+    <script src="./src/js/ajax/glue.js"></script>
+    <script src="./src/js/popup_menu/startmenu.js"></script>
+    <script src="./src/js/popup_menu/quickview_panel.js"></script>
+    <script src="./src/js/right_click/right_click.js"></script>
+    <script src="./src/js/clock/clock_taskbar.js"></script>
 </body>
 </html>
