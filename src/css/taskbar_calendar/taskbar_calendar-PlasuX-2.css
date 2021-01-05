@@ -1,0 +1,76 @@
+#taskbar_calendar {
+  position: fixed;
+  z-index: 9998;
+  bottom: 35px;
+  right: 5px;
+  height: 627px;
+  width: 390px;
+  background: rgba(251, 253, 254, 0.5);
+  border-radius: 7px;
+  backdrop-filter: blur(50px);
+  overflow: hidden;
+  opacity: 1;
+  transition: bottom 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.5s cubic-bezier(0, 1, 0, 1);
+}
+#taskbar_calendar #tsk_cal_sec_ring, #taskbar_calendar #tsk_cal_min_ring, #taskbar_calendar #tsk_cal_hr_ring {
+  position: absolute;
+  width: 770px;
+  height: 770px;
+  border-right: 45px solid rgba(250, 17, 79, 0.1);
+  border-bottom: 45px solid transparent;
+  border-left: 45px solid transparent;
+  border-top: 45px solid #fa114f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  transition: 1000ms transform cubic-bezier(0, 1, 0, 1);
+}
+#taskbar_calendar #tsk_cal_min_ring {
+  width: 680px;
+  height: 680px;
+  border-top: 45px solid #ffe620;
+  border-right: 45px solid rgba(255, 230, 32, 0.1);
+}
+#taskbar_calendar #tsk_cal_hr_ring {
+  width: 590px;
+  height: 590px;
+  border-top: 45px solid #00f5ea;
+  border-right: 45px solid rgba(0, 245, 234, 0.1);
+}
+#taskbar_calendar #tsk_digi_clock {
+  position: absolute;
+  width: 210px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#taskbar_calendar #tsk_digi_clock #tsk_digi_hr, #taskbar_calendar #tsk_digi_clock #tsk_digi_min_sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  color: #1a1a1a;
+}
+#taskbar_calendar #tsk_digi_clock #tsk_digi_hr {
+  font-size: 98px;
+  margin-right: 4px;
+}
+#taskbar_calendar #tsk_digi_clock #tsk_digi_min_sec {
+  flex-direction: column;
+}
+#taskbar_calendar #tsk_digi_clock #tsk_digi_min_sec * {
+  font-size: 42px;
+}
+#taskbar_calendar #tsk_digi_date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: calc(100% - 770px);
+  width: 50%;
+}
+
+.animated_taskbar_calendar {
+  height: calc(100% - 35px - 5px) !important;
+  bottom: 35px !important;
+  opacity: 1 !important;
+}

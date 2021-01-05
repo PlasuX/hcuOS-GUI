@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hcuOS - demo</title>
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/index.css">
-    <link rel="stylesheet" href="./src/css/wallpaper/wallpaper.css">
-    <link rel="stylesheet" href="./src/css/taskbar/taskbar.css">
-    <link rel="stylesheet" href="./src/css/taskbar/taskbar_datatitle.css">
-    <link rel="stylesheet" href="./src/css/startmenu/startmenu.css">
-    <link rel="stylesheet" href="./src/css/quickview_panel/quickview_panel.css">
-    <link rel="stylesheet" href="./src/css/right_click/right_click.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/wallpaper/wallpaper.css">
+    <link rel="stylesheet" href="src/css/taskbar/taskbar.css">
+    <link rel="stylesheet" href="src/css/taskbar/taskbar_datatitle.css">
+    <link rel="stylesheet" href="src/css/startmenu/startmenu.css">
+    <link rel="stylesheet" href="src/css/quickview_panel/quickview_panel.css">
+    <link rel="stylesheet" href="src/css/right_click/right_click.css">
+    <link rel="stylesheet" href="src/css/taskbar_calendar/taskbar_calendar.css">
+    <link rel="stylesheet" href="src/css/weather_widget/weather_widget.css">
+    <link rel="stylesheet" href="src/css/selection_area/sele_wallpaper.css">
+
+    <link rel="stylesheet" href="src/css/dark_lightmode/lightmode.css">
+    <link rel="stylesheet" href="src/css/dark_lightmode/darkmode.css">
 </head>
 <body>
     <div id="root">
-        <div id="wallpaper" getfile="./src/components/wallpaper/wallpaper.html"></div>
-        <div id="taskbar" getfile="./src/components/taskbar/taskbar.html"></div>
-        <div id="hcu_right_click" getfile="./src/components/right_click/right_click.html"></div>
-        <div id="startmenu" getfile="./src/components/startmenu/startmenu.html"></div>
-        <div id="quickview_panel" getfile="./src/components/quickview_panel/quickview_panel.html"></div>
+        <div id="wallpaper" getfile="src/components/wallpaper/wallpaper.html"></div>
+        <div id="taskbar" getfile="src/components/taskbar/taskbar.html"></div>
+        <div id="hcu_right_click" getfile="src/components/right_click/right_click.html"></div>
+        <div id="startmenu" getfile="src/components/startmenu/startmenu.html"></div>
+        <div id="quickview_panel" getfile="src/components/quickview_panel/quickview_panel.html"></div>
+        <div id="taskbar_calendar" getfile="src/components/taskbar_calendar/taskbar_calendar.html"></div>
+        <div id="selection_wallpaper" getfile="src/components/selection_area/sele_wallpaper.html"></div>
     </div>
 
-    <script src="./src/js/ajax/glue.js"></script>
-    <script src="./src/js/popup_menu/startmenu.js"></script>
-    <script src="./src/js/popup_menu/quickview_panel.js"></script>
-    <script src="./src/js/right_click/right_click.js"></script>
-    <script src="./src/js/clock/clock_taskbar.js"></script>
+    <script src="src/js/ajax/glue.js"></script>
+    <script src="src/js/popup_menu/startmenu.js"></script>
+    <script src="src/js/popup_menu/quickview_panel.js"></script>
+    <script src="src/js/right_click/right_click.js"></script>
+    <script src="src/js/clock/clock_taskbar.js"></script>
+    <script src="src/js/taskbar_calendar/taskbar_calendar.js"></script>
+    <script src="src/js/weather_widget/weather_widget.js"></script>
+    <script src="src/js/selection_area/sele_wallpaper.js"></script>
 </body>
 </html>

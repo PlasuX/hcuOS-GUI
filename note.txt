@@ -1,0 +1,10 @@
+---
+Cách trang web xử lý:
+index.html <-- id="root"
+root ajax các code con ra
+xử lý các thứ --> done
+---
+(P/s: sẽ thử reactjs ở lần sau)
+
+---
+Nguyễn Đặng Đức Anh, A2-K13 <3

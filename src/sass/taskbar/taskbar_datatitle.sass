@@ -1,0 +1,30 @@
+[data-title]
+    position: relative
+    &:hover::before
+        content: attr(data-title)
+        position: absolute
+        display: inline-block
+        padding: 6px 9px
+        border-radius: 3px
+        background: rgba(251, 253, 254, 1)
+        color: #1a1a1a
+        font-size: 12px
+        font-family: 'Roboto', sans-serif
+        white-space: nowrap
+        font-weight: 500
+
+#startbtn[data-title]
+    &:hover::before
+        bottom: 32.5px
+        left: 2.5px
+
+#noti_btn[data-title]
+    &:hover::before
+        right: -12.5px
+        bottom: 32.5px
+
+#taskbar_time[data-title]
+    &:hover::before
+        bottom: 32.5px
+
+//cho các id khác ngoài các id trong taskbar.
