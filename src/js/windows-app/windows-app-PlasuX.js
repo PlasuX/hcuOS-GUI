@@ -450,11 +450,10 @@ function minmax_program(a) {
 }
 
 //test stuff
-window.onload = function() {
-    setTimeout(() => {
-        var shittyval = document.getElementById('test');
-        shittyval.addEventListener("click", function () {
-            alert(':)')
-        })
-    }, 50);
-}
+
+setTimeout(() => {
+    var shittyval = document.getElementById('test');
+shittyval.addEventListener(click, function() {
+    alert(':)')
+})
+}, 1000);

@@ -3,16 +3,17 @@
     z-index: 10 //min = 10
     top: 10px
     left: 10px
-    height: 300px
-    width: 400px
+    height: 500px
+    width: 900px
     min-height: 230px
-    min-width: 200px
+    min-width: 300px
     overflow: hidden
     background: rgba(251, 253, 254, 0.4)
     backdrop-filter: blur(20px)
     border-radius: 7px
     box-shadow: 0 18px 50px rgba(0, 0, 0, 0.52)
-    transition: height 100ms cubic-bezier(0,1,0,1), width 100ms cubic-bezier(0,1,0,1), background 100ms linear
+    transition: height 100ms cubic-bezier(0,1,0,1), width 100ms cubic-bezier(0,1,0,1), opacity 300ms cubic-bezier(0,1,0,1) 50ms
+    animation: openwin 300ms cubic-bezier(0,1,0,1)
     .winapp_btn
         position: absolute
         top: 0px
@@ -43,6 +44,7 @@
         height: calc(100% - 35px)
         width: 100%
         background: rgb(255, 255, 255)
+        overflow: scroll
 
 .windows-app:before
     content: ""
@@ -54,9 +56,9 @@
     border: 1px solid rgba(255, 255, 255, 0.15)
     
 .win_fullscreen
-    top: 50% !important
-    left: 50% !important
-    transform: translate(-50%, calc(-50% - 15px)) !important
+    top: 0% !important
+    left: 0% !important
+    //transform: translate(-50%, calc(-50% - 15px)) !important
     height: calc(100% - 30px) !important
     width: 100% !important
     border-radius: 0px
@@ -66,34 +68,97 @@
     height: calc(50% - 15px) !important
     width: 50% !important
     border-radius: 0 0 7px 0
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 .win_left
     top: 0 !important
     left: 0 !important
     height: calc(100% - 30px) !important
     width: 50% !important
-    border-radius: 0 7px 7px 0
-
+    border-radius: 0
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 .win_right
     top: 0 !important
     left: 50% !important
     height: calc(100% - 30px) !important
     width: 50% !important
-    border-radius: 7px 0 0 7px
+    border-radius: 0
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 .win_topright
     top: 0 !important
     left: 50% !important
     height: calc(50% - 15px) !important
     width: 50% !important
     border-radius: 0 0 0 7px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 .win_bottomleft
     top: calc(50% - 15px) !important
     left: 0 !important
     height: calc(50% - 15px) !important
     width: 50% !important
     border-radius: 0 7px 0 0
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 .win_bottomright
     top: calc(50% - 15px) !important
     left: 50% !important
     height: calc(50% - 15px) !important
     width: 50% !important
     border-radius: 7px 0 0 0
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+//close-animation
+.win_close_ani
+    opacity: 0.3 !important
+    animation: closewin 300ms cubic-bezier(0,1,0,1)
+    transform: scale(0.8)
+
+.win_minmax_ani
+    opacity: 0.3 !important
+
+@keyframes closewin
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(0.8)
+
+@keyframes openwin
+    0%
+        transform: scale(0.8)
+    100%
+        transform: scale(1)
+
+
+//---------------------------
+.alertbox
+    top: calc(50% - 230px / 2) !important
+    left: calc(50% - 300px / 2) !important
+    height: 230px !important
+    width: 300px !important
+    border-radius: 7px !important
+    cursor: default !important
+    .winapp_btn
+        .winapp_btn_max
+            display: none !important
+    .winapp_body
+        background: none
+        display: flex
+        justify-content: center
+        align-items: center
+        .alert_content
+            transform: translateY(-17.5px)
+            font-family: 'Roboto', sans-serif
+            font-size: 20px
+            margin-right: 14px
+            margin-left: 14px
+    .alert_header
+        position: absolute
+        top: 19px
+        left: 14px
+        font-family: 'Roboto', sans-serif !important
+        font-size: 12px
+        font-weight: 500
+        transform: translate(0%, -50%)
+        color: red
+        img
+            transform: translateY(-2px)
+//---------------------------
+

@@ -1,14 +1,15 @@
 setInterval(showTime, 1000);
 
 function showTime() {
-    var time = new Date;
+    var time = new Date();
     var hour = time.getHours();
     var min = time.getMinutes();
     var sec = time.getSeconds();
     var year = time.getFullYear();
     var date = time.getDate();
+    var date_letter;
     if (date > 3) {
-        var date_letter = "th"
+            date_letter = "th";
     } else switch (date) {
         case 1:
             date_letter = "st";
@@ -17,7 +18,7 @@ function showTime() {
             date_letter = "nd";
             break;
         case 3:
-            date_letter = "rd"
+            date_letter = "rd";
     }
 
     var month = new Array(12);
@@ -61,8 +62,8 @@ function showTime() {
     var currentTime = hour + ":" + min + " " + am_pm;
     document.getElementById("clock").innerHTML = currentTime;
 
-    var taskbartime_info = document.getElementById('taskbar_time')
-    taskbartime_info.setAttribute('data-title', day + ", " + month_num + " " + date + date_letter + " " + year)
+    var taskbartime_info = document.getElementById('taskbar_time');
+    taskbartime_info.setAttribute('data-title', day + ", " + month_num + " " + date + date_letter + " " + year);
 }
 
 showTime();
@@ -70,7 +71,7 @@ showTime();
 //nháp 2
 window.onload = function () {
     function showTime() {
-        var time = new Date,
+        var time = new Date(),
             hour = time.getHours(),
             min = time.getMinutes(),
             sec = time.getSeconds();
@@ -277,3 +278,5 @@ function showTime() {
 };
 setInterval(showTime, 1000);
 showTime();
+
+

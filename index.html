@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hcuOS - demo</title>
+    <title>hcuOS - GUI demo</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/index.css">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="src/css/selection_area/sele_wallpaper.css">
     <link rel="stylesheet" href="src/css/windows-app/windows-app.css">
     <link rel="stylesheet" href="src\css\snap_win\snap_win.css">
-
+    <link rel="stylesheet" href="src/css/volume_panel/volume_panel.css">
     <link rel="stylesheet" href="src/css/dark_lightmode/lightmode.css">
     <link rel="stylesheet" href="src/css/dark_lightmode/darkmode.css">
 
@@ -34,11 +34,14 @@
         <div id="quickview_panel" getfile="src/components/quickview_panel/quickview_panel.html"></div>
         <div id="taskbar_calendar" getfile="src/components/taskbar_calendar/taskbar_calendar.html"></div>
         <div id="selection_wallpaper" getfile="src/components/selection_area/sele_wallpaper.html"></div>
-        <div class="windows-app" getfile="src/components/windows-app/windows-app.html" onmousedown="zindex(this, event)" ondblclick="dbfullscr(this, event)" onmousemove="xydetect(this, event)" onmouseout="endxydetect(this)"></div>
+        <div class="windows-app" getfile="src/components/windows-app/windows-app.html" onmousedown="zindex(this, event)"
+            ondblclick="dbfullscr(this, event)" onmousemove="xydetect(this, event)" onmouseout="endxydetect(this)">
+        </div>
         <div id="windows-app-snap" getfile="src\components\snap_win\snap_win.html"></div>
+        <div id="volume_panel" getfile="src/components/volume_panel/volume_panel.html"></div>
     </div>
-
     <script src="src/js/ajax/glue.js"></script>
+    <script src="src/js/reset/reset.js"></script>
     <script src="src/js/popup_menu/startmenu.js"></script>
     <script src="src/js/popup_menu/quickview_panel.js"></script>
     <script src="src/js/right_click/right_click.js"></script>
@@ -47,6 +50,7 @@
     <script src="src/js/weather_widget/weather_widget.js"></script>
     <script src="src/js/selection_area/sele_wallpaper.js"></script>
     <script src="src/js/windows-app/windows-app.js"></script>
+    <script src="src/js/popup_menu/volume_panel.js"></script>
 </body>
 
 </html>

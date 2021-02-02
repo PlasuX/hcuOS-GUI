@@ -4,7 +4,7 @@ function getthehtml() {
     for (num_array = 0; num_array < get_tag.length; num_array++) {
         var value_of_num_array = get_tag[num_array];
         if (get_file = value_of_num_array.getAttribute("getfile")) {
-            get_tag = new XMLHttpRequest;
+            get_tag = new XMLHttpRequest();
             get_tag.onreadystatechange = function () {
                 4 == this.readyState && (200 == this.status && (value_of_num_array.innerHTML = this.responseText), 404 == this.status && (value_of_num_array.innerHTML = "Page not found."), value_of_num_array.removeAttribute("getfile"), getthehtml());
             };
@@ -13,6 +13,5 @@ function getthehtml() {
             break;
         }
     }
-};
-
-getthehtml() //thực thi code các thứ owo
+}
+getthehtml(); //thực thi code các thứ owo

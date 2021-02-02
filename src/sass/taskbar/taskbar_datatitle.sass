@@ -6,7 +6,7 @@
         display: inline-block
         padding: 6px 9px
         border-radius: 3px
-        background: rgba(251, 253, 254, 1)
+        background: #fbfdfe
         color: #1a1a1a
         font-size: 12px
         font-family: 'Roboto', sans-serif
@@ -24,6 +24,10 @@
         bottom: 32.5px
 
 #taskbar_time[data-title]
+    &:hover::before
+        bottom: 32.5px
+
+#volume_sys[data-title]
     &:hover::before
         bottom: 32.5px
 

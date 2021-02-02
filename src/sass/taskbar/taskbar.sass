@@ -7,9 +7,9 @@
     width: 100vw
     background: rgba(251, 253, 254, 0.6)
     backdrop-filter: blur(30px)
-    #startbtn:hover, #preview_desktop_btn:hover, #noti_btn:hover, #taskbar_time:hover
+    #startbtn:hover, #preview_desktop_btn:hover, #noti_btn:hover, #taskbar_time:hover, #volume_sys:hover
         background: rgba(251, 253, 254, 0.4)
-    #startbtn:active, #preview_desktop_btn:active, #noti_btn:active, #taskbar_time:active
+    #startbtn:active, #preview_desktop_btn:active, #noti_btn:active, #taskbar_time:active, #volume_sys:active
         background: rgba(251, 253, 254, 0.6)
     #startbtn
         position: relative
@@ -48,7 +48,7 @@
         align-items: center
         justify-content: center
         #noti_btn_ico
-            transition: height 20ms linear, width 20ms linear
+            transition: height 50ms linear, width 50ms linear
     #noti_btn:hover
         #noti_btn_ico
             height: 22px
@@ -60,12 +60,37 @@
     #taskbar_time
         float: right
         height: 30px
-        width: 80px
+        width: 70px
         display: flex
         align-items: center
         justify-content: center
-        user-select: none
         #clock
             font-family: 'Roboto', sans-serif
+            font-weight: 500
             font-size: 14px
             color: #1a1a1a
+    #volume_sys
+        float: right
+        height: 30px
+        width: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            transition: height 100ms linear, width 100ms linear
+    #volume_sys:hover
+        img
+            height: 22px
+            width: 22px
+    #volume_sys:active
+        img
+            height: 19px
+            width: 19px
+    /*#test
+        float: left
+        height: 30px
+        width: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: green */

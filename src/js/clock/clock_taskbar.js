@@ -1,7 +1,7 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.createTemplateTagFirstArg = function (c) {
-    return c.raw = c;
+    return c.raw == c;
 };
 $jscomp.createTemplateTagFirstArgWithRaw = function (c, d) {
     c.raw = d;
@@ -9,7 +9,7 @@ $jscomp.createTemplateTagFirstArgWithRaw = function (c, d) {
 };
 
 function showTime() {
-    var c = new Date,
+    var c = new Date(),
         d = c.getHours(),
         e = c.getMinutes(),
         f = c.getSeconds(),
@@ -25,8 +25,9 @@ function showTime() {
         u = document.getElementById("tsk_digi_wkday"),
         v = document.getElementById("tsk_digi_mon_n_day"),
         w = document.getElementById("tsk_digi_year");
+    var g;
     if (3 < h && h != 21 && h != 22 && h != 23 && h != 31) {
-        var g = "th";
+        g = "th";
     } else {
         switch (h) {
             case 1:
@@ -82,7 +83,7 @@ function showTime() {
     d = d + ":" + e + " " + b;
     document.getElementById("clock").innerHTML = d;
     document.getElementById("taskbar_time").setAttribute("data-title", c + ", " + a + " " + h + g + " " + k);
-    c = new Date;
+    c = new Date();
     a = Array(12);
     a[0] = "January";
     a[1] = "February";
@@ -110,4 +111,3 @@ function showTime() {
     v.innerHTML = a + " " + h + "<sup>" + g + "</sup>";
 }
 setInterval(showTime, 1000);
-showTime();

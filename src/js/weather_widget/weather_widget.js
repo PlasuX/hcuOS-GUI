@@ -1,7 +1,7 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.createTemplateTagFirstArg = function (c) {
-    return c.raw = c;
+    return c.raw == c;
 };
 $jscomp.createTemplateTagFirstArgWithRaw = function (c, e) {
     c.raw = e;
@@ -38,15 +38,15 @@ function dbtt() {
             } else {
                 console.log("There are some error in here, sorry");
             }
-            var current_weather_info = f.current
-            widget_weather_info(current_weather_info)
+            var current_weather_info = f.current;
+            widget_weather_info(current_weather_info);
         };
         a.onerror = function () {
             console.log("Cant get your Ip. sorry :(");
         };
         a.send();
     }
-    var a = new XMLHttpRequest;
+    var a = new XMLHttpRequest();
     a.open("GET", "https://api.ipify.org/?format=json", !0);
     a.onload = function () {
         if (200 <= this.status && 400 > this.status) {
@@ -66,5 +66,5 @@ function dbtt() {
 dbtt();
 
 function widget_weather_info(current_weather_info) {
-    console.log(current_weather_info)
+    console.log(current_weather_info);
 }

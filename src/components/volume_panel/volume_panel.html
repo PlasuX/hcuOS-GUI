@@ -1,0 +1,6 @@
+<div id="cirle_vol_panel">
+    <input type="range" min="0" max="100" value="100" step="2" id="vol_range_panel"
+        oninput="num_vol_val_panel.value = this.value; iconvol(this.value);"
+        ondblclick="this.value = 0; num_vol_val_panel.value = this.value; document.getElementById('vol_icon_panel').src='src/image/svg/volume_off.svg'">
+</div>
+<p id="txt_vol_panel">Volume: <output id="num_vol_val_panel">100</output></p>
