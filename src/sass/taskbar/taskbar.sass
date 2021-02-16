@@ -7,9 +7,9 @@
     width: 100vw
     background: rgba(251, 253, 254, 0.6)
     backdrop-filter: blur(30px)
-    #startbtn:hover, #preview_desktop_btn:hover, #noti_btn:hover, #taskbar_time:hover, #volume_sys:hover
+    #startbtn:hover, #preview_desktop_btn:hover, #noti_btn:hover, #taskbar_time:hover, #volume_sys:hover, .fixin_rotatin:hover
         background: rgba(251, 253, 254, 0.4)
-    #startbtn:active, #preview_desktop_btn:active, #noti_btn:active, #taskbar_time:active, #volume_sys:active
+    #startbtn:active, #preview_desktop_btn:active, #noti_btn:active, #taskbar_time:active, #volume_sys:active, .fixin_rotatin:active
         background: rgba(251, 253, 254, 0.6)
     #startbtn
         position: relative
@@ -86,11 +86,69 @@
         img
             height: 19px
             width: 19px
-    /*#test
+    #flexible_space
         float: left
         height: 30px
-        width: 40px
-        display: flex
-        align-items: center
-        justify-content: center
-        background: green */
+        width: 10px
+        //background: black
+    #taskbar_app_space
+        position: relative
+        float: left
+        height: calc(100vw - 225px)
+        width: 30px
+        transform: rotate(-90deg) translateY(-30px)
+        transform-origin: top right
+        overflow: scroll
+        .currently_running_app
+            position: relative
+            width: 30px
+            height: 40px
+            overflow: hidden
+            margin-bottom: 1px
+            .fixin_rotatin
+                position: absolute
+                height: 30px
+                width: 40px
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(90deg)
+                .cur_run_app_dot
+                    position: absolute
+                    bottom: 2px
+                    left: 50%
+                    transform: translateX(-50%)
+                    height: 4px
+                    width: 4px
+                    background: #1a1a1a
+                    border-radius: 50%
+                    opacity: 0
+                    transition: opacity 300ms cubic-bezier(0,1,0,1)
+                .icon_app_taskbar
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    height: 16px
+                    width: 16px
+                    background: #1a1a1a
+                    overflow: hidden
+                    border-radius: 3.5px
+                    transition: 1000ms transform cubic-bezier(0,1,0,1)
+            .fixin_rotatin:hover
+                .icon_app_taskbar
+                    transform: translate(-50%, calc(-50% - 2px))
+            .fixin_rotatin:active
+                .icon_app_taskbar
+                    transform: translate(-50%, -50%)
+
+@keyframes app_taskbar_nhapnho
+    0%
+        transform: translate(-50%, -50%)
+    50%
+        transform: translate(-50%, calc(-50% - 2px))
+    100%
+        transform: translate(-50%, -50%)
+
+//coming soon
+.unhide_cur_run_app_dot
+    opacity: 1 !important

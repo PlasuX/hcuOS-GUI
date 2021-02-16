@@ -20,13 +20,135 @@
         height: 100%
         width: 300px
         background: rgba(251, 253, 254, 0.5)
-        overflow: scroll
+        overflow: hidden
+        #app_holder_startmenu
+            position: absolute
+            top: 10px
+            left: 10px
+            width: calc(100% - 20px)
+            height: calc(100% - 70px)
+            //background: #ffffff
+            border-radius: 7px
+            overflow: hidden
+            font-family: 'Roboto', sans-serif
+            #startmenu_app_holder_container
+                position: absolute
+                top: 0
+                left: 0
+                height: 280px
+                width: 475px
+                transform: rotate(-90deg) translateY(-475px)
+                transform-origin: right top
+                overflow: scroll
+                .startmenu_app_holder_label
+                    position: relative
+                    height: 40px
+                    width: 100%
+                    //background: grey
+                    margin-bottom: 1px
+                    display: flex
+                    align-items: center
+                    justify-content: flex-end
+                    padding-right: 10px
+                    font-size: 30px
+                    transition: background 1s cubic-bezier(0,1,0,1), transform 0.5s cubic-bezier(0,1,0,1)
+                    border-radius: 7px
+                .startmenu_app_holder_label:hover
+                    background: rgba(251, 253, 254, 0.5)
+                .startmenu_app_holder_label:active
+                    background: rgba(251, 253, 254, 0.3)
+                    transform: scale(0.975)
+                //.startmenu_app_holder_label:last-of-type
+                //      margin-bottom: 0
+                .startmenu_app_label_loca
+                    position: relative
+                    height: auto
+                    width: 100%
+                    //background: white
+                    margin-bottom: 1px
+                    padding: 20px 0 20px 0
+                    overflow: hidden
+                    display: flex
+                    flex-direction: row-reverse
+                    flex-wrap: wrap
+                    row-gap: 40px
+                    .icon_n_name_for_app_startmenu
+                        position: relative
+                        height: 53px
+                        width: 96px
+                        //background: white
+                        transform: rotate(90deg) translateY(-12px)
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        justify-content: space-between
+                        .icon_for_app_startmenu
+                            height: 32px
+                            width: 32px
+                            background: #1a1a1a
+                            border-radius: 7px
+                            transition: 300ms transform cubic-bezier(0,1,0,1)
+                        .name_for_app_startmenu
+                            width: 100%
+                            height: 16px
+                            //background: pink
+                            overflow: hidden
+                            text-align: center
+                            text-overflow: ellipsis
+                            transition: 1000ms opacity cubic-bezier(0,1,0,1)
+                            color: #1a1a1a
+                    .icon_n_name_for_app_startmenu:hover
+                        .icon_for_app_startmenu
+                            transform: translateY(-3px)
+                        .name_for_app_startmenu
+                            opacity: 0.9
+                    .icon_n_name_for_app_startmenu:active
+                        .icon_for_app_startmenu
+                            transform: translateY(0px)
+                        .name_for_app_startmenu
+                            opacity: 0.6
+                .startmenu_app_label_loca:last-of-type
+                    margin-bottom: 0
+
+        #hot_btn_startmenu
+            position: absolute
+            bottom: 10px
+            left: 10px
+            width: calc(100% - 20px)
+            height: 40px
+            //background: #ffffff
+            border-radius: 7px
+            overflow: hidden
+            display: flex
+            justify-content: center
+            align-items: center
+            //backdrop-filter: blur(10px)
+            img
+                width: 56px
+                height: 40px
+                padding: 10px
+                transition: padding 300ms cubic-bezier(0,1,0,1), background 100ms linear, opacity 300ms cubic-bezier(0,1,0,1)
+        #hot_btn_startmenu:hover
+            img
+                background: rgba(251, 253, 254, 0.1)
+                padding: 11px
+                opacity: 0.8
+            img:hover
+                background: rgba(251, 253, 254, 0.5)
+                padding: 8px
+                opacity: 1
+            img:active
+                background: rgba(251, 253, 254, 0.3)
+                padding: 10px
+
     #startmenu_rightside
         position: absolute
         right: 0
         top: 0
         height: 100%
         width: 445px
+
+
 .animated_startmenu
     //display: block !important
     bottom: 35px !important

@@ -1,10 +1,10 @@
 <div id="startbtn" data-title="hcuOS Start" onclick="openstartmenu()">
     <div id="startbtn_circleico"></div>
 </div>
-<div id="preview_desktop_btn" onclick="alert('coming soon ;)'); backtodesktop()"></div>
+<div id="preview_desktop_btn"></div>
 <div id="noti_btn" data-title="Quickview" onclick="openquickviewmenu()">
-    <svg xmlns="http://www.w3.org/2000/svg" id="noti_btn_ico" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#1a1a1a"
-        width="19px" height="19px">
+    <svg xmlns="http://www.w3.org/2000/svg" id="noti_btn_ico" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+        fill="#1a1a1a" width="19px" height="19px">
         <g>
             <rect fill="none" height="24" width="24" />
             <path
@@ -17,4 +17,18 @@
 </div>
 <div id="volume_sys" data-title="Volume" onclick="openvolpanel()">
     <img id="vol_icon_panel" src="src/image/svg/volume_up.svg">
+</div>
+<div id="flexible_space"></div>
+<div id="taskbar_app_space">
+
+    <div class="currently_running_app" id="currentapp_id_1" onclick="cur_runapp(this)">
+        <div class="fixin_rotatin">
+            <div class="cur_run_app_dot"></div>
+            <div class="icon_app_taskbar">
+                <!--note: icon của app trong taskbar bắt buộc là 16x16 . Nên dùng định dạng svg. Và link ở bên ngoài vào-->
+
+            </div>
+        </div>
+    </div>
+
 </div>

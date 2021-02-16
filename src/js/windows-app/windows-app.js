@@ -367,7 +367,9 @@ function endxydetect(a) {
     }
 }
 window.onmouseup = function () {
-    0 < document.querySelectorAll(".windows-app").length && (document.querySelector(".windows-app").style.transition = "height 100ms cubic-bezier(0,1,0,1), width 100ms cubic-bezier(0,1,0,1), opacity 300ms cubic-bezier(0,1,0,1) 50ms");
+    var i = 0;
+    if (0 != document.querySelectorAll(".windows-app").length)
+        for (i = 0; i < document.querySelectorAll(".windows-app").length; i++) document.querySelectorAll(".windows-app")[i].style.transition = "height 100ms cubic-bezier(0,1,0,1), width 100ms cubic-bezier(0,1,0,1), opacity 300ms cubic-bezier(0,1,0,1) 50ms";
     window.removeEventListener("mousemove", retop);
     window.removeEventListener("mousemove", reright);
     window.removeEventListener("mousemove", rebottom);
@@ -439,22 +441,13 @@ function closeprogram(a) {
 }
 
 function minmax_program(a) {
-    a.parentNode.parentNode.classList.toggle('win_minmax_ani');
+    var b = a.parentNode.parentNode;
+    b.classList.toggle('win_minmax_ani');
     setTimeout(function () {
-        if (a.parentNode.parentNode.classList.contains('win_minmax_ani')) {
-            a.parentNode.parentNode.style.display = 'none';
+        if (b.classList.contains('win_minmax_ani')) {
+            b.style.display = 'none';
         } else {
-            a.parentNode.parentNode.style.display = 'block';
+            b.style.display = 'block';
         }
     }, 175);
-}
-
-//test stuff
-window.onload = function() {
-    setTimeout(() => {
-        var shittyval = document.getElementById('test');
-        shittyval.addEventListener("click", function () {
-            alert(':)')
-        })
-    }, 50);
 }

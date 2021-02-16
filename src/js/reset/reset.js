@@ -16,5 +16,5 @@ window.alert = function (b) {
     setTimeout(function () {
         a.children[0].insertAdjacentHTML("beforeend", d);
         a.insertAdjacentHTML("afterbegin", '<p class="alert_header"><img src="src/image/svg/warning.svg">&nbspAlert</p>');
-    }, 50);
+    }, 750);
 }; //alertcontext

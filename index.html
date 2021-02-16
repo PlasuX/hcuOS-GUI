@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hcuOS - GUI demo</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="src/css/weather_widget/weather_widget.css">
     <link rel="stylesheet" href="src/css/selection_area/sele_wallpaper.css">
     <link rel="stylesheet" href="src/css/windows-app/windows-app.css">
-    <link rel="stylesheet" href="src\css\snap_win\snap_win.css">
+    <link rel="stylesheet" href="src/css/snap_win/snap_win.css">
     <link rel="stylesheet" href="src/css/volume_panel/volume_panel.css">
     <link rel="stylesheet" href="src/css/dark_lightmode/lightmode.css">
     <link rel="stylesheet" href="src/css/dark_lightmode/darkmode.css">
@@ -30,14 +30,16 @@
         <div id="wallpaper" getfile="src/components/wallpaper/wallpaper.html"></div>
         <div id="taskbar" getfile="src/components/taskbar/taskbar.html"></div>
         <div id="hcu_right_click" getfile="src/components/right_click/right_click.html"></div>
-        <div id="startmenu" getfile="src/components/startmenu/startmenu.html"></div>
+        <div id="startmenu" getfile="src/components/startmenu/startmenu.html" class="animated_startmenu"></div>
         <div id="quickview_panel" getfile="src/components/quickview_panel/quickview_panel.html"></div>
         <div id="taskbar_calendar" getfile="src/components/taskbar_calendar/taskbar_calendar.html"></div>
         <div id="selection_wallpaper" getfile="src/components/selection_area/sele_wallpaper.html"></div>
+        <!--
         <div class="windows-app" getfile="src/components/windows-app/windows-app.html" onmousedown="zindex(this, event)"
             ondblclick="dbfullscr(this, event)" onmousemove="xydetect(this, event)" onmouseout="endxydetect(this)">
-        </div>
-        <div id="windows-app-snap" getfile="src\components\snap_win\snap_win.html"></div>
+        </div> 
+        -->
+        <div id="windows-app-snap" getfile="src/components/snap_win/snap_win.html"></div>
         <div id="volume_panel" getfile="src/components/volume_panel/volume_panel.html"></div>
     </div>
     <script src="src/js/ajax/glue.js"></script>
@@ -51,6 +53,7 @@
     <script src="src/js/selection_area/sele_wallpaper.js"></script>
     <script src="src/js/windows-app/windows-app.js"></script>
     <script src="src/js/popup_menu/volume_panel.js"></script>
+    <script src="src/js/taskbar/taskbar.js"></script>
 </body>
 
 </html>

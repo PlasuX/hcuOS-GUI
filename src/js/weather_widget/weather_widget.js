@@ -1,3 +1,4 @@
+/*
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.createTemplateTagFirstArg = function (c) {
@@ -68,3 +69,4 @@ dbtt();
 function widget_weather_info(current_weather_info) {
     console.log(current_weather_info);
 }
+*/
